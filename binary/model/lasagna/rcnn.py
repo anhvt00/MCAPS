@@ -285,12 +285,6 @@ for train, test in train_test:
     spec = num_true_neg / (num_true_neg + num_false_neg)
     f1 = 2. * prec * recall / (prec + recall)
     mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / ((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5
-    accuracy = num_hit / num_total
-    prec = num_true_pos / (num_true_pos + num_false_pos)
-    recall = num_true_pos / num_pos
-    spec = num_true_neg / (num_true_neg + num_false_neg)
-    f1 = 2. * prec * recall / (prec + recall)
-    mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / (((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5)
     history_list.append(history)
     print(f"==================Performance metrics at training time {training_time}===============")
     print (accuracy, prec, recall, spec, mcc, f1)

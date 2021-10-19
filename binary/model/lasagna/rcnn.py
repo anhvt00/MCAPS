@@ -284,7 +284,6 @@ for train, test in train_test:
     spec = num_true_neg / (num_true_neg + num_false_neg)
     f1 = 2. * prec * recall / (prec + recall)
     mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / ((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5
-    history_list.append(history)
     print(f"================== Overall performance metrics at training time {training_time}===============")
     print (accuracy, prec, recall, spec, mcc, f1)
     model.save('my_model'+str(training_time))

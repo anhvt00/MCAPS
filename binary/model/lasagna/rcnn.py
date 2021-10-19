@@ -61,7 +61,6 @@ from tensorflow.compat.v1.keras.layers import CuDNNGRU, Input
 # KTF.set_session(get_session())
 
 # Import accessory modules
-import pdb
 import os
 import numpy as np
 from tqdm import tqdm
@@ -149,7 +148,6 @@ print (avg_m_seq, max_m_seq)
 dim = seq2t.dim
 seq_tensor = np.array([seq2t.embed_normalized(line, seq_size) for line in tqdm(seq_array)])
 
-import pdb; 
 seq_index1 = np.array([line[sid1_index] for line in tqdm(raw_data)])
 seq_index2 = np.array([line[sid2_index] for line in tqdm(raw_data)])
 
@@ -259,8 +257,9 @@ for train, test in train_test:
     rms = RMSprop(learning_rate=0.001)
     merge_model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
     print(f'==================== Training time  {training_time} =====================')
-    pdb.set_trace()
-    history = merge_model.fit([seq_tensor[seq_index1[train]], seq_tensor[seq_index2[train]]], class_labels[train], batch_size=batch_size, epochs=n_epochs)
+    merge_model.fit([seq_tensor[seq_index1[train]], seq_tensor[seq_index2[train]]], class_labels[train], batch_size=batch_size, epochs=n_epochs)
+    print(f'********************* Save model {training_time}*****************')
+    merge_model.save(f'saved_model/model{training_time}')
     print(f'==================End training {training_time}========================')
     # result1 = merge_model.evaluate([seq_tensor1[test], seq_tensor2[test]], class_labels[test])
     pred = merge_model.predict([seq_tensor[seq_index1[test]], seq_tensor[seq_index2[test]]])
@@ -286,7 +285,7 @@ for train, test in train_test:
     f1 = 2. * prec * recall / (prec + recall)
     mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / ((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5
     history_list.append(history)
-    print(f"==================Performance metrics at training time {training_time}===============")
+    print(f"================== Overall performance metrics at training time {training_time}===============")
     print (accuracy, prec, recall, spec, mcc, f1)
     model.save('my_model'+str(training_time))
     training_time += 1
@@ -297,6 +296,7 @@ recall = num_true_pos / num_pos
 spec = num_true_neg / (num_true_neg + num_false_neg)
 f1 = 2. * prec * recall / (prec + recall)
 mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / (((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5)
+print("========================== Overall performance metrics ================================")
 print (accuracy, prec, recall, spec,mcc ,f1)
 
 with open(rst_file, 'w') as fp:

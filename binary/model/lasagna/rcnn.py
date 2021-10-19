@@ -75,7 +75,7 @@ import scipy
 # Create seqs is a list of protein sequences e.g ['MSYTDNPPQTKRALSLDDLV...EIFEGSKKVM', 'MGYTLFRFIVPFNPYFSSFY...LVSLVRNQKH']
 # Create id2index is a dictionary of protein id and index number e.g {'O13297': 0, 'O13530': 1}
 # Create index is the number of sequences in protein.dictionary.tsv file 
-id2seq_file = '../../../yeast/preprocessed/SEQ-Supp-ABCD.tsv'
+id2seq_file = '../../../yeast/preprocessed/protein.dictionary.tsv'
 id2index = {}
 seqs = []
 index = 0

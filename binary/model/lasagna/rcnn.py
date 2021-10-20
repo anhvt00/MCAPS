@@ -28,6 +28,7 @@ from __future__ import print_function
 
 # Add path of embedding directory
 import sys
+import pdb
 if '../../../embeddings' not in sys.path:
     sys.path.append('../../../embeddings')
 
@@ -88,13 +89,13 @@ seq_array = []
 id2_aid = {}
 sid = 0
 seq_size = 2000
-emb_files = ['../../../embeddings/default_onehot.txt', '../../../embeddings/string_vec5.txt', '../../../embeddings/CTCoding_onehot.txt', '../../../embeddings/vec5_CTC.txt']
+emb_files = ['../../../embeddings/default_onehot.txt', '../../../embeddings/string_vec5.txt', '../../../embeddings/string_vec7.txt','../../../embeddings/vec5_CTC.txt', '../../../embeddings/vec7_CTC.txt' ,'../../../embeddings/CTCoding_onehot.txt']
 use_emb = 0
 hidden_dim = 25
 n_epochs=50
 
 # ds_file, label_index, rst_file, use_emb, hidden_dim
-ds_file = '../../../yeast/preprocessed/Supp-AB.tsv'
+ds_file = '../../../yeast/preprocessed/proten.dictionary.tsv'
 label_index = 2
 rst_file = 'results/15k_onehot_cnn.txt'
 sid1_index = 0
@@ -246,7 +247,6 @@ num_false_pos = 0.
 num_true_neg = 0.
 num_false_neg = 0.
 
-history_list = []
 
 training_time = 1
 
@@ -286,7 +286,6 @@ for train, test in train_test:
     mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / ((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5
     print(f"================== Overall performance metrics at training time {training_time}===============")
     print (accuracy, prec, recall, spec, mcc, f1)
-    model.save('my_model'+str(training_time))
     training_time += 1
     
 accuracy = num_hit / num_total

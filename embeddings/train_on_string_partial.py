@@ -1,4 +1,4 @@
-txt_file = '../string/preprocessed/protein.sequences.corpus_partial.txt'
+txt_file = '../string/preprocessed/protein.actions.15k.tsv'
 inp = txt_file
 ofile = 'string_vec_partial.txt'
 
@@ -29,10 +29,14 @@ if __name__ == '__main__':
 
     model = Word2Vec(sentences, vector_size=5, window=10 , min_count=1 , sg=1 , workers=multiprocessing.cpu_count()-1 )
 
-    model.wv.save_word2vec_format("string_vec7.bin", binary=True)
+    model.wv.save_word2vec_format("string_vec7.txt", binary=False)
     #vocab_size = len(model.vocab)
     with open(ofile, 'w')as fp:
-        for w in model.wv.vocab:
+        # for w in model.wv.vocab:
+
+        for w in list(model.wv.index_to_key):
             fp.write(w + '\t')
-            fp.write(" ".join([str(d) for d in model[w]]) + "\n")
+            # fp.write(" ".join([str(d) for d in model[w]]) + "\n")
+            fp.write(" ".join([str(d) for d in model.wv[w]]) + "\n")
+            
     print (time.time()-t0)

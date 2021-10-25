@@ -2140,3 +2140,1071 @@ Traceback (most recent call last):
   File "rcnn.py", line 300, in <module>
     with open(rst_file, 'w') as fp:
 FileNotFoundError: [Errno 2] No such file or directory: 'results/yeast_wvctc_rcnn_50_5.txt'
+************************************************************************
+
+/content/PIPR/binary/model/lasagna
+11188it [00:00, 477641.34it/s]
+11187
+2 1
+100% 2497/2497 [00:00<00:00, 3466.12it/s]
+100% 11187/11187 [00:00<00:00, 3504232.92it/s]
+100% 11187/11187 [00:00<00:00, 3697823.22it/s]
+[ 0  2  4  6  8 10 10 13 15 17]
+{'0': 1, '1': 0}
+5
+2021-10-23 04:10:15.546101: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:15.552810: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:15.553435: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:15.554445: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:15.555027: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:15.555552: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:16.085132: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:16.085724: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:16.086279: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-10-23 04:10:16.086777: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2021-10-23 04:10:16.086826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 15435 MB memory:  -> device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0
+==================== Training time  1 =====================
+2021-10-23 04:10:20.933017: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/100
+2021-10-23 04:10:40.113425: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8005
+35/35 [==============================] - 35s 402ms/step - loss: 0.6932 - accuracy: 0.5004
+Epoch 2/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6936 - accuracy: 0.5025
+Epoch 3/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6949 - accuracy: 0.4985
+Epoch 4/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6933 - accuracy: 0.4937
+Epoch 5/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.4987
+Epoch 6/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5026
+Epoch 7/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5049
+Epoch 8/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5081
+Epoch 9/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6933 - accuracy: 0.5018
+Epoch 10/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5022
+Epoch 11/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5093
+Epoch 12/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5027
+Epoch 13/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6928 - accuracy: 0.5142
+Epoch 14/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5168
+Epoch 15/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5031
+Epoch 16/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6928 - accuracy: 0.5104
+Epoch 17/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5153
+Epoch 18/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6928 - accuracy: 0.5175
+Epoch 19/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6936 - accuracy: 0.5046
+Epoch 20/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5036
+Epoch 21/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5094
+Epoch 22/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5160
+Epoch 23/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6926 - accuracy: 0.5196
+Epoch 24/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6914 - accuracy: 0.5351
+Epoch 25/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6938 - accuracy: 0.5055
+Epoch 26/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6939 - accuracy: 0.4954
+Epoch 27/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6934 - accuracy: 0.4960
+Epoch 28/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5065
+Epoch 29/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6926 - accuracy: 0.5220
+Epoch 30/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5099
+Epoch 31/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6918 - accuracy: 0.5214
+Epoch 32/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6914 - accuracy: 0.5262
+Epoch 33/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6914 - accuracy: 0.5268
+Epoch 34/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6923 - accuracy: 0.5262
+Epoch 35/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6920 - accuracy: 0.5254
+Epoch 36/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6881 - accuracy: 0.5418
+Epoch 37/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.7087 - accuracy: 0.5264
+Epoch 38/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.7495 - accuracy: 0.5136
+Epoch 39/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.7091 - accuracy: 0.5004
+Epoch 40/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6931 - accuracy: 0.5169
+Epoch 41/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5071
+Epoch 42/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6917 - accuracy: 0.5273
+Epoch 43/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6890 - accuracy: 0.5397
+Epoch 44/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6847 - accuracy: 0.5556
+Epoch 45/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6764 - accuracy: 0.5774
+Epoch 46/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6705 - accuracy: 0.5899
+Epoch 47/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6521 - accuracy: 0.6195
+Epoch 48/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6589 - accuracy: 0.6065
+Epoch 49/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6038 - accuracy: 0.6790
+Epoch 50/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.5383 - accuracy: 0.7392
+Epoch 51/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.4211 - accuracy: 0.8166
+Epoch 52/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.3239 - accuracy: 0.8670
+Epoch 53/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.2559 - accuracy: 0.8961
+Epoch 54/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1971 - accuracy: 0.9192
+Epoch 55/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1655 - accuracy: 0.9292
+Epoch 56/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1502 - accuracy: 0.9326
+Epoch 57/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1203 - accuracy: 0.9437
+Epoch 58/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1441 - accuracy: 0.9325
+Epoch 59/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1185 - accuracy: 0.9425
+Epoch 60/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.1004 - accuracy: 0.9487
+Epoch 61/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0986 - accuracy: 0.9494
+Epoch 62/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0956 - accuracy: 0.9530
+Epoch 63/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0975 - accuracy: 0.9546
+Epoch 64/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1009 - accuracy: 0.9526
+Epoch 65/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0969 - accuracy: 0.9538
+Epoch 66/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0943 - accuracy: 0.9551
+Epoch 67/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1005 - accuracy: 0.9502
+Epoch 68/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0948 - accuracy: 0.9551
+Epoch 69/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0982 - accuracy: 0.9543
+Epoch 70/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0890 - accuracy: 0.9557
+Epoch 71/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0907 - accuracy: 0.9556
+Epoch 72/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0913 - accuracy: 0.9569
+Epoch 73/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0916 - accuracy: 0.9566
+Epoch 74/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0884 - accuracy: 0.9555
+Epoch 75/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0791 - accuracy: 0.9613
+Epoch 76/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0816 - accuracy: 0.9608
+Epoch 77/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0856 - accuracy: 0.9569
+Epoch 78/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0829 - accuracy: 0.9588
+Epoch 79/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0762 - accuracy: 0.9630
+Epoch 80/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0704 - accuracy: 0.9669
+Epoch 81/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0997 - accuracy: 0.9553
+Epoch 82/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0877 - accuracy: 0.9592
+Epoch 83/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0737 - accuracy: 0.9654
+Epoch 84/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0727 - accuracy: 0.9637
+Epoch 85/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0746 - accuracy: 0.9663
+Epoch 86/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0863 - accuracy: 0.9592
+Epoch 87/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0694 - accuracy: 0.9669
+Epoch 88/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0666 - accuracy: 0.9692
+Epoch 89/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0722 - accuracy: 0.9689
+Epoch 90/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0712 - accuracy: 0.9699
+Epoch 91/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0754 - accuracy: 0.9673
+Epoch 92/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0797 - accuracy: 0.9654
+Epoch 93/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0702 - accuracy: 0.9689
+Epoch 94/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0740 - accuracy: 0.9693
+Epoch 95/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0524 - accuracy: 0.9773
+Epoch 96/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0483 - accuracy: 0.9794
+Epoch 97/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0512 - accuracy: 0.9799
+Epoch 98/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0424 - accuracy: 0.9812
+Epoch 99/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0390 - accuracy: 0.9834
+Epoch 100/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0482 - accuracy: 0.9797
+********************* Save model 1*****************
+2021-10-23 04:34:08.454683: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+WARNING:absl:Found untraced functions such as gru_cell_1_layer_call_and_return_conditional_losses, gru_cell_1_layer_call_fn, gru_cell_2_layer_call_and_return_conditional_losses, gru_cell_2_layer_call_fn, gru_cell_4_layer_call_and_return_conditional_losses while saving (showing 5 of 50). These functions will not be directly callable after loading.
+/usr/local/lib/python3.7/dist-packages/keras/utils/generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+==================End training 1========================
+================== Overall performance metrics at training time 1===============
+0.9477211796246648 0.9527777777777777 0.9397260273972603 0.9430051813471503 2.010211121399729 0.9462068965517241
+==================== Training time  2 =====================
+Epoch 1/100
+35/35 [==============================] - 36s 398ms/step - loss: 0.6935 - accuracy: 0.5049
+Epoch 2/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6934 - accuracy: 0.5069
+Epoch 3/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6935 - accuracy: 0.5013
+Epoch 4/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6933 - accuracy: 0.5058
+Epoch 5/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6931 - accuracy: 0.5128
+Epoch 6/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6933 - accuracy: 0.5069
+Epoch 7/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5145
+Epoch 8/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6935 - accuracy: 0.5109
+Epoch 9/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.4974
+Epoch 10/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6931 - accuracy: 0.5069
+Epoch 11/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5047
+Epoch 12/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5052
+Epoch 13/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6931 - accuracy: 0.5079
+Epoch 14/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5031
+Epoch 15/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5180
+Epoch 16/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6934 - accuracy: 0.4975
+Epoch 17/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6932 - accuracy: 0.5011
+Epoch 18/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6932 - accuracy: 0.5011
+Epoch 19/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6930 - accuracy: 0.5120
+Epoch 20/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6932 - accuracy: 0.5045
+Epoch 21/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6928 - accuracy: 0.5176
+Epoch 22/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6933 - accuracy: 0.4961
+Epoch 23/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6928 - accuracy: 0.5070
+Epoch 24/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5119
+Epoch 25/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6930 - accuracy: 0.5042
+Epoch 26/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6925 - accuracy: 0.5188
+Epoch 27/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6930 - accuracy: 0.5100
+Epoch 28/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6923 - accuracy: 0.5227
+Epoch 29/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6922 - accuracy: 0.5234
+Epoch 30/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6925 - accuracy: 0.5197
+Epoch 31/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6920 - accuracy: 0.5297
+Epoch 32/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6911 - accuracy: 0.5316
+Epoch 33/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6897 - accuracy: 0.5345
+Epoch 34/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6802 - accuracy: 0.5718
+Epoch 35/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6584 - accuracy: 0.6090
+Epoch 36/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6127 - accuracy: 0.6546
+Epoch 37/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.4956 - accuracy: 0.7634
+Epoch 38/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.3372 - accuracy: 0.8536
+Epoch 39/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.2249 - accuracy: 0.9098
+Epoch 40/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1806 - accuracy: 0.9233
+Epoch 41/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.1508 - accuracy: 0.9326
+Epoch 42/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1144 - accuracy: 0.9459
+Epoch 43/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0949 - accuracy: 0.9532
+Epoch 44/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0959 - accuracy: 0.9531
+Epoch 45/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.1104 - accuracy: 0.9496
+Epoch 46/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0888 - accuracy: 0.9544
+Epoch 47/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0825 - accuracy: 0.9595
+Epoch 48/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0754 - accuracy: 0.9636
+Epoch 49/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0794 - accuracy: 0.9652
+Epoch 50/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0834 - accuracy: 0.9612
+Epoch 51/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0762 - accuracy: 0.9639
+Epoch 52/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0752 - accuracy: 0.9639
+Epoch 53/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0713 - accuracy: 0.9669
+Epoch 54/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0751 - accuracy: 0.9651
+Epoch 55/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0666 - accuracy: 0.9687
+Epoch 56/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0548 - accuracy: 0.9743
+Epoch 57/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0523 - accuracy: 0.9765
+Epoch 58/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0456 - accuracy: 0.9802
+Epoch 59/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0431 - accuracy: 0.9809
+Epoch 60/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0639 - accuracy: 0.9752
+Epoch 61/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0478 - accuracy: 0.9792
+Epoch 62/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0431 - accuracy: 0.9829
+Epoch 63/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0364 - accuracy: 0.9848
+Epoch 64/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0237 - accuracy: 0.9904
+Epoch 65/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0202 - accuracy: 0.9918
+Epoch 66/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0267 - accuracy: 0.9890
+Epoch 67/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0253 - accuracy: 0.9913
+Epoch 68/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0431 - accuracy: 0.9864
+Epoch 69/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0264 - accuracy: 0.9901
+Epoch 70/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0161 - accuracy: 0.9942
+Epoch 71/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0231 - accuracy: 0.9920
+Epoch 72/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0256 - accuracy: 0.9922
+Epoch 73/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0270 - accuracy: 0.9906
+Epoch 74/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0251 - accuracy: 0.9923
+Epoch 75/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0372 - accuracy: 0.9859
+Epoch 76/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0207 - accuracy: 0.9930
+Epoch 77/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0098 - accuracy: 0.9969
+Epoch 78/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0063 - accuracy: 0.9982
+Epoch 79/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0036 - accuracy: 0.9984
+Epoch 80/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0018 - accuracy: 0.9993
+Epoch 81/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0019 - accuracy: 0.9994
+Epoch 82/100
+35/35 [==============================] - 14s 397ms/step - loss: 9.3836e-04 - accuracy: 0.9998
+Epoch 83/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0016 - accuracy: 0.9996
+Epoch 84/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0290 - accuracy: 0.9909
+Epoch 85/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0305 - accuracy: 0.9889
+Epoch 86/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0121 - accuracy: 0.9955
+Epoch 87/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0064 - accuracy: 0.9982
+Epoch 88/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0168 - accuracy: 0.9946
+Epoch 89/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0111 - accuracy: 0.9960
+Epoch 90/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0142 - accuracy: 0.9969
+Epoch 91/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0083 - accuracy: 0.9982
+Epoch 92/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0033 - accuracy: 0.9991
+Epoch 93/100
+35/35 [==============================] - 14s 398ms/step - loss: 6.9402e-04 - accuracy: 1.0000
+Epoch 94/100
+35/35 [==============================] - 14s 398ms/step - loss: 2.9712e-04 - accuracy: 1.0000
+Epoch 95/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.3152e-04 - accuracy: 1.0000
+Epoch 96/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.0078e-04 - accuracy: 1.0000
+Epoch 97/100
+35/35 [==============================] - 14s 398ms/step - loss: 7.8440e-05 - accuracy: 1.0000
+Epoch 98/100
+35/35 [==============================] - 14s 397ms/step - loss: 6.3677e-05 - accuracy: 1.0000
+Epoch 99/100
+35/35 [==============================] - 14s 397ms/step - loss: 5.2688e-05 - accuracy: 1.0000
+Epoch 100/100
+35/35 [==============================] - 14s 397ms/step - loss: 4.4529e-05 - accuracy: 1.0000
+********************* Save model 2*****************
+WARNING:absl:Found untraced functions such as gru_cell_16_layer_call_and_return_conditional_losses, gru_cell_16_layer_call_fn, gru_cell_17_layer_call_and_return_conditional_losses, gru_cell_17_layer_call_fn, gru_cell_19_layer_call_and_return_conditional_losses while saving (showing 5 of 50). These functions will not be directly callable after loading.
+/usr/local/lib/python3.7/dist-packages/keras/utils/generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+==================End training 2========================
+================== Overall performance metrics at training time 2===============
+0.9559874888293118 0.9635103926096997 0.9464609800362976 0.9489398528775422 2.2220448656408993 0.9549095902952621
+==================== Training time  3 =====================
+Epoch 1/100
+35/35 [==============================] - 37s 401ms/step - loss: 0.6948 - accuracy: 0.5072
+Epoch 2/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5057
+Epoch 3/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5092
+Epoch 4/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5060
+Epoch 5/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5123
+Epoch 6/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5103
+Epoch 7/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5109
+Epoch 8/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6928 - accuracy: 0.5184
+Epoch 9/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6929 - accuracy: 0.5198
+Epoch 10/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5079
+Epoch 11/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6928 - accuracy: 0.5188
+Epoch 12/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6922 - accuracy: 0.5279
+Epoch 13/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6927 - accuracy: 0.5169
+Epoch 14/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5125
+Epoch 15/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6923 - accuracy: 0.5276
+Epoch 16/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6923 - accuracy: 0.5166
+Epoch 17/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6919 - accuracy: 0.5208
+Epoch 18/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6921 - accuracy: 0.5268
+Epoch 19/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5067
+Epoch 20/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6927 - accuracy: 0.5140
+Epoch 21/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6927 - accuracy: 0.5244
+Epoch 22/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6927 - accuracy: 0.5172
+Epoch 23/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6925 - accuracy: 0.5172
+Epoch 24/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6888 - accuracy: 0.5397
+Epoch 25/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6872 - accuracy: 0.5432
+Epoch 26/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6820 - accuracy: 0.5516
+Epoch 27/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6709 - accuracy: 0.5800
+Epoch 28/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6602 - accuracy: 0.5917
+Epoch 29/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6452 - accuracy: 0.6030
+Epoch 30/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.5982 - accuracy: 0.6578
+Epoch 31/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.5323 - accuracy: 0.7207
+Epoch 32/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.4472 - accuracy: 0.7854
+Epoch 33/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.3307 - accuracy: 0.8533
+Epoch 34/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.2408 - accuracy: 0.8973
+Epoch 35/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1554 - accuracy: 0.9349
+Epoch 36/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1253 - accuracy: 0.9415
+Epoch 37/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0957 - accuracy: 0.9520
+Epoch 38/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0798 - accuracy: 0.9650
+Epoch 39/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0794 - accuracy: 0.9639
+Epoch 40/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0889 - accuracy: 0.9590
+Epoch 41/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0753 - accuracy: 0.9659
+Epoch 42/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0595 - accuracy: 0.9736
+Epoch 43/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0647 - accuracy: 0.9718
+Epoch 44/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0630 - accuracy: 0.9720
+Epoch 45/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0493 - accuracy: 0.9796
+Epoch 46/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0383 - accuracy: 0.9831
+Epoch 47/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0309 - accuracy: 0.9866
+Epoch 48/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0262 - accuracy: 0.9903
+Epoch 49/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0264 - accuracy: 0.9891
+Epoch 50/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0303 - accuracy: 0.9880
+Epoch 51/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0209 - accuracy: 0.9918
+Epoch 52/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0263 - accuracy: 0.9908
+Epoch 53/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0486 - accuracy: 0.9822
+Epoch 54/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0368 - accuracy: 0.9857
+Epoch 55/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0251 - accuracy: 0.9894
+Epoch 56/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0137 - accuracy: 0.9942
+Epoch 57/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0229 - accuracy: 0.9923
+Epoch 58/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0238 - accuracy: 0.9912
+Epoch 59/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0174 - accuracy: 0.9954
+Epoch 60/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.0066 - accuracy: 0.9975
+Epoch 61/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0042 - accuracy: 0.9984
+Epoch 62/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0052 - accuracy: 0.9983
+Epoch 63/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0051 - accuracy: 0.9981
+Epoch 64/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0027 - accuracy: 0.9991
+Epoch 65/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0022 - accuracy: 0.9993
+Epoch 66/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0025 - accuracy: 0.9989
+Epoch 67/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0036 - accuracy: 0.9994
+Epoch 68/100
+35/35 [==============================] - 14s 397ms/step - loss: 6.3228e-04 - accuracy: 1.0000
+Epoch 69/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.5988e-04 - accuracy: 1.0000
+Epoch 70/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.7322e-04 - accuracy: 1.0000
+Epoch 71/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.0428e-04 - accuracy: 1.0000
+Epoch 72/100
+35/35 [==============================] - 14s 397ms/step - loss: 8.2443e-05 - accuracy: 1.0000
+Epoch 73/100
+35/35 [==============================] - 14s 397ms/step - loss: 6.4504e-05 - accuracy: 1.0000
+Epoch 74/100
+35/35 [==============================] - 14s 397ms/step - loss: 5.3635e-05 - accuracy: 1.0000
+Epoch 75/100
+35/35 [==============================] - 14s 395ms/step - loss: 4.2480e-05 - accuracy: 1.0000
+Epoch 76/100
+35/35 [==============================] - 14s 396ms/step - loss: 3.7450e-05 - accuracy: 1.0000
+Epoch 77/100
+35/35 [==============================] - 14s 396ms/step - loss: 3.2497e-05 - accuracy: 1.0000
+Epoch 78/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.9323e-05 - accuracy: 1.0000
+Epoch 79/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.6196e-05 - accuracy: 1.0000
+Epoch 80/100
+35/35 [==============================] - 14s 396ms/step - loss: 2.4423e-05 - accuracy: 1.0000
+Epoch 81/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.1877e-05 - accuracy: 1.0000
+Epoch 82/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.0388e-05 - accuracy: 1.0000
+Epoch 83/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.8826e-05 - accuracy: 1.0000
+Epoch 84/100
+35/35 [==============================] - 14s 395ms/step - loss: 1.7201e-05 - accuracy: 1.0000
+Epoch 85/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.6153e-05 - accuracy: 1.0000
+Epoch 86/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.5174e-05 - accuracy: 1.0000
+Epoch 87/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.4156e-05 - accuracy: 1.0000
+Epoch 88/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.3324e-05 - accuracy: 1.0000
+Epoch 89/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.2624e-05 - accuracy: 1.0000
+Epoch 90/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.2039e-05 - accuracy: 1.0000
+Epoch 91/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.1422e-05 - accuracy: 1.0000
+Epoch 92/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.0804e-05 - accuracy: 1.0000
+Epoch 93/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.0398e-05 - accuracy: 1.0000
+Epoch 94/100
+35/35 [==============================] - 14s 397ms/step - loss: 9.8644e-06 - accuracy: 1.0000
+Epoch 95/100
+35/35 [==============================] - 14s 397ms/step - loss: 9.4430e-06 - accuracy: 1.0000
+Epoch 96/100
+35/35 [==============================] - 14s 397ms/step - loss: 9.0638e-06 - accuracy: 1.0000
+Epoch 97/100
+35/35 [==============================] - 14s 397ms/step - loss: 8.6439e-06 - accuracy: 1.0000
+Epoch 98/100
+35/35 [==============================] - 14s 396ms/step - loss: 8.3242e-06 - accuracy: 1.0000
+Epoch 99/100
+35/35 [==============================] - 14s 396ms/step - loss: 8.0389e-06 - accuracy: 1.0000
+Epoch 100/100
+35/35 [==============================] - 14s 397ms/step - loss: 7.7431e-06 - accuracy: 1.0000
+********************* Save model 3*****************
+WARNING:absl:Found untraced functions such as gru_cell_31_layer_call_and_return_conditional_losses, gru_cell_31_layer_call_fn, gru_cell_32_layer_call_and_return_conditional_losses, gru_cell_32_layer_call_fn, gru_cell_34_layer_call_and_return_conditional_losses while saving (showing 5 of 50). These functions will not be directly callable after loading.
+/usr/local/lib/python3.7/dist-packages/keras/utils/generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+==================End training 3========================
+================== Overall performance metrics at training time 3===============
+0.9579919559064501 0.9650774369875493 0.9500747384155456 0.9511695906432749 2.2828769554168673 0.9575173244953299
+==================== Training time  4 =====================
+Epoch 1/100
+35/35 [==============================] - 36s 397ms/step - loss: 0.6944 - accuracy: 0.5158
+Epoch 2/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5053
+Epoch 3/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5113
+Epoch 4/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5050
+Epoch 5/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5130
+Epoch 6/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5116
+Epoch 7/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5083
+Epoch 8/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5036
+Epoch 9/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6935 - accuracy: 0.5047
+Epoch 10/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5047
+Epoch 11/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6928 - accuracy: 0.5161
+Epoch 12/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.6935 - accuracy: 0.5038
+Epoch 13/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6937 - accuracy: 0.5007
+Epoch 14/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5134
+Epoch 15/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5168
+Epoch 16/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6933 - accuracy: 0.4998
+Epoch 17/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6927 - accuracy: 0.5202
+Epoch 18/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6926 - accuracy: 0.5220
+Epoch 19/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5134
+Epoch 20/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6928 - accuracy: 0.5150
+Epoch 21/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6919 - accuracy: 0.5297
+Epoch 22/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6915 - accuracy: 0.5297
+Epoch 23/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5196
+Epoch 24/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6930 - accuracy: 0.5144
+Epoch 25/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6934 - accuracy: 0.5066
+Epoch 26/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6929 - accuracy: 0.5156
+Epoch 27/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6926 - accuracy: 0.5144
+Epoch 28/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6917 - accuracy: 0.5284
+Epoch 29/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6906 - accuracy: 0.5403
+Epoch 30/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6900 - accuracy: 0.5359
+Epoch 31/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6911 - accuracy: 0.5323
+Epoch 32/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6903 - accuracy: 0.5331
+Epoch 33/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6919 - accuracy: 0.5267
+Epoch 34/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6874 - accuracy: 0.5477
+Epoch 35/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6871 - accuracy: 0.5410
+Epoch 36/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6880 - accuracy: 0.5353
+Epoch 37/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6789 - accuracy: 0.5692
+Epoch 38/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6772 - accuracy: 0.5677
+Epoch 39/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6683 - accuracy: 0.5806
+Epoch 40/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6590 - accuracy: 0.6023
+Epoch 41/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6232 - accuracy: 0.6442
+Epoch 42/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.5778 - accuracy: 0.6905
+Epoch 43/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.4919 - accuracy: 0.7574
+Epoch 44/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.3888 - accuracy: 0.8327
+Epoch 45/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.2765 - accuracy: 0.8828
+Epoch 46/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1728 - accuracy: 0.9261
+Epoch 47/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1239 - accuracy: 0.9410
+Epoch 48/100
+35/35 [==============================] - 14s 398ms/step - loss: 0.1240 - accuracy: 0.9425
+Epoch 49/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0987 - accuracy: 0.9502
+Epoch 50/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0937 - accuracy: 0.9537
+Epoch 51/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0953 - accuracy: 0.9542
+Epoch 52/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0848 - accuracy: 0.9573
+Epoch 53/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0815 - accuracy: 0.9625
+Epoch 54/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0870 - accuracy: 0.9573
+Epoch 55/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1073 - accuracy: 0.9526
+Epoch 56/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0763 - accuracy: 0.9641
+Epoch 57/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0610 - accuracy: 0.9717
+Epoch 58/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0470 - accuracy: 0.9758
+Epoch 59/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0478 - accuracy: 0.9797
+Epoch 60/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0420 - accuracy: 0.9803
+Epoch 61/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0470 - accuracy: 0.9810
+Epoch 62/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0450 - accuracy: 0.9820
+Epoch 63/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0319 - accuracy: 0.9859
+Epoch 64/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0263 - accuracy: 0.9888
+Epoch 65/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0329 - accuracy: 0.9874
+Epoch 66/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0536 - accuracy: 0.9808
+Epoch 67/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0405 - accuracy: 0.9831
+Epoch 68/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0308 - accuracy: 0.9877
+Epoch 69/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0345 - accuracy: 0.9865
+Epoch 70/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0199 - accuracy: 0.9926
+Epoch 71/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0174 - accuracy: 0.9943
+Epoch 72/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0116 - accuracy: 0.9962
+Epoch 73/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0133 - accuracy: 0.9956
+Epoch 74/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0067 - accuracy: 0.9983
+Epoch 75/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0063 - accuracy: 0.9980
+Epoch 76/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0125 - accuracy: 0.9958
+Epoch 77/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.0251 - accuracy: 0.9914
+Epoch 78/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0221 - accuracy: 0.9922
+Epoch 79/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0326 - accuracy: 0.9892
+Epoch 80/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0164 - accuracy: 0.9946
+Epoch 81/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0163 - accuracy: 0.9949
+Epoch 82/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0289 - accuracy: 0.9895
+Epoch 83/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0242 - accuracy: 0.9899
+Epoch 84/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0071 - accuracy: 0.9974
+Epoch 85/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.0055 - accuracy: 0.9980
+Epoch 86/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0053 - accuracy: 0.9982
+Epoch 87/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0031 - accuracy: 0.9987
+Epoch 88/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.0039 - accuracy: 0.9993
+Epoch 89/100
+35/35 [==============================] - 14s 397ms/step - loss: 9.3446e-04 - accuracy: 0.9998
+Epoch 90/100
+35/35 [==============================] - 14s 396ms/step - loss: 4.8933e-04 - accuracy: 0.9999
+Epoch 91/100
+35/35 [==============================] - 14s 397ms/step - loss: 3.4756e-04 - accuracy: 0.9998
+Epoch 92/100
+35/35 [==============================] - 14s 397ms/step - loss: 2.5667e-04 - accuracy: 0.9999
+Epoch 93/100
+35/35 [==============================] - 14s 397ms/step - loss: 1.7650e-04 - accuracy: 1.0000
+Epoch 94/100
+35/35 [==============================] - 14s 396ms/step - loss: 1.4279e-04 - accuracy: 1.0000
+Epoch 95/100
+35/35 [==============================] - 14s 395ms/step - loss: 1.0679e-04 - accuracy: 1.0000
+Epoch 96/100
+35/35 [==============================] - 14s 397ms/step - loss: 8.1825e-05 - accuracy: 1.0000
+Epoch 97/100
+35/35 [==============================] - 14s 397ms/step - loss: 6.6486e-05 - accuracy: 1.0000
+Epoch 98/100
+35/35 [==============================] - 14s 397ms/step - loss: 5.6520e-05 - accuracy: 1.0000
+Epoch 99/100
+35/35 [==============================] - 14s 396ms/step - loss: 5.2134e-05 - accuracy: 1.0000
+Epoch 100/100
+35/35 [==============================] - 14s 397ms/step - loss: 4.5079e-05 - accuracy: 1.0000
+********************* Save model 4*****************
+WARNING:absl:Found untraced functions such as gru_cell_46_layer_call_and_return_conditional_losses, gru_cell_46_layer_call_fn, gru_cell_47_layer_call_and_return_conditional_losses, gru_cell_47_layer_call_fn, gru_cell_49_layer_call_and_return_conditional_losses while saving (showing 5 of 50). These functions will not be directly callable after loading.
+/usr/local/lib/python3.7/dist-packages/keras/utils/generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+==================End training 4========================
+================== Overall performance metrics at training time 4===============
+0.9582122905027933 0.9615558570782451 0.9542190305206463 0.9549469964664311 2.289768969002738 0.9578733949087632
+==================== Training time  5 =====================
+Epoch 1/100
+35/35 [==============================] - 36s 397ms/step - loss: 0.6937 - accuracy: 0.5091
+Epoch 2/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6935 - accuracy: 0.4971
+Epoch 3/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5035
+Epoch 4/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5126
+Epoch 5/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5106
+Epoch 6/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6936 - accuracy: 0.5045
+Epoch 7/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5001
+Epoch 8/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5008
+Epoch 9/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6932 - accuracy: 0.5086
+Epoch 10/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5124
+Epoch 11/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5031
+Epoch 12/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5044
+Epoch 13/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6934 - accuracy: 0.4926
+Epoch 14/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.4999
+Epoch 15/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5039
+Epoch 16/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5025
+Epoch 17/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.4964
+Epoch 18/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5060
+Epoch 19/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6931 - accuracy: 0.5056
+Epoch 20/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5054
+Epoch 21/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5053
+Epoch 22/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5027
+Epoch 23/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6933 - accuracy: 0.5023
+Epoch 24/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.4889
+Epoch 25/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.4951
+Epoch 26/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5063
+Epoch 27/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6929 - accuracy: 0.5041
+Epoch 28/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5127
+Epoch 29/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6933 - accuracy: 0.4954
+Epoch 30/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5021
+Epoch 31/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5006
+Epoch 32/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5050
+Epoch 33/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6933 - accuracy: 0.5015
+Epoch 34/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5028
+Epoch 35/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6941 - accuracy: 0.5128
+Epoch 36/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6946 - accuracy: 0.4932
+Epoch 37/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6937 - accuracy: 0.5050
+Epoch 38/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6941 - accuracy: 0.4990
+Epoch 39/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5106
+Epoch 40/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5018
+Epoch 41/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5032
+Epoch 42/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5123
+Epoch 43/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5016
+Epoch 44/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5080
+Epoch 45/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5021
+Epoch 46/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5026
+Epoch 47/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5073
+Epoch 48/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5021
+Epoch 49/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6933 - accuracy: 0.4905
+Epoch 50/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.4952
+Epoch 51/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5045
+Epoch 52/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5021
+Epoch 53/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5099
+Epoch 54/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5057
+Epoch 55/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5158
+Epoch 56/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.5072
+Epoch 57/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5075
+Epoch 58/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6934 - accuracy: 0.4911
+Epoch 59/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.4961
+Epoch 60/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5021
+Epoch 61/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6931 - accuracy: 0.5105
+Epoch 62/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5166
+Epoch 63/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5022
+Epoch 64/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6930 - accuracy: 0.5089
+Epoch 65/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6932 - accuracy: 0.5044
+Epoch 66/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5122
+Epoch 67/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5072
+Epoch 68/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6930 - accuracy: 0.5096
+Epoch 69/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6929 - accuracy: 0.5172
+Epoch 70/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6928 - accuracy: 0.5118
+Epoch 71/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6929 - accuracy: 0.5126
+Epoch 72/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6931 - accuracy: 0.5012
+Epoch 73/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6929 - accuracy: 0.5111
+Epoch 74/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6932 - accuracy: 0.4969
+Epoch 75/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5196
+Epoch 76/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6929 - accuracy: 0.5139
+Epoch 77/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6927 - accuracy: 0.5191
+Epoch 78/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6922 - accuracy: 0.5274
+Epoch 79/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6925 - accuracy: 0.5210
+Epoch 80/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6923 - accuracy: 0.5174
+Epoch 81/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6906 - accuracy: 0.5258
+Epoch 82/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6899 - accuracy: 0.5327
+Epoch 83/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6861 - accuracy: 0.5554
+Epoch 84/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6904 - accuracy: 0.5228
+Epoch 85/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6926 - accuracy: 0.5210
+Epoch 86/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6879 - accuracy: 0.5483
+Epoch 87/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.7153 - accuracy: 0.5065
+Epoch 88/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.6927 - accuracy: 0.5212
+Epoch 89/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6893 - accuracy: 0.5460
+Epoch 90/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6907 - accuracy: 0.5308
+Epoch 91/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.6747 - accuracy: 0.5870
+Epoch 92/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6526 - accuracy: 0.6234
+Epoch 93/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.6344 - accuracy: 0.6544
+Epoch 94/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.5765 - accuracy: 0.6959
+Epoch 95/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.4646 - accuracy: 0.7927
+Epoch 96/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.3373 - accuracy: 0.8615
+Epoch 97/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.2480 - accuracy: 0.9036
+Epoch 98/100
+35/35 [==============================] - 14s 395ms/step - loss: 0.1964 - accuracy: 0.9215
+Epoch 99/100
+35/35 [==============================] - 14s 396ms/step - loss: 0.1666 - accuracy: 0.9245
+Epoch 100/100
+35/35 [==============================] - 14s 397ms/step - loss: 0.1446 - accuracy: 0.9360
+********************* Save model 5*****************
+WARNING:absl:Found untraced functions such as gru_cell_61_layer_call_and_return_conditional_losses, gru_cell_61_layer_call_fn, gru_cell_62_layer_call_and_return_conditional_losses, gru_cell_62_layer_call_fn, gru_cell_64_layer_call_and_return_conditional_losses while saving (showing 5 of 50). These functions will not be directly callable after loading.
+/usr/local/lib/python3.7/dist-packages/keras/utils/generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+==================End training 5========================
+================== Overall performance metrics at training time 5===============
+0.9525341914722446 0.9581824764663287 0.9463615233327374 0.9470245452940138 2.1282377316153056 0.9522353152829001
+========================== Overall performance metrics ================================
+0.9525341914722446 0.9581824764663287 0.9463615233327374 0.9470245452940138 2.1282377316153056 0.9522353152829001

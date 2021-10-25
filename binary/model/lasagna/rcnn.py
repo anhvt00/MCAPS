@@ -29,8 +29,11 @@ from __future__ import print_function
 # Add path of embedding directory
 import sys
 import pdb
+import os
 if '../../../embeddings' not in sys.path:
+    # sys.path.append('/home/anhvt116/Downloads/PPI-research/Repositories/PIPR')
     sys.path.append('../../../embeddings')
+# sys.path.append(os.path.dirname(__file__)+'/../../../embeddings' )
 
 # Import class s2t from seq2tensor
 from seq2tensor import s2t
@@ -249,7 +252,7 @@ num_false_neg = 0.
 
 
 training_time = 1
-
+pdb.set_trace()
 for train, test in train_test:
     merge_model = None
     merge_model = build_model()

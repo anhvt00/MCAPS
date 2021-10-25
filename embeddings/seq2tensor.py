@@ -1,4 +1,7 @@
+import sys
+sys.path.append('')
 import numpy as np
+
 
 class s2t(object):
     

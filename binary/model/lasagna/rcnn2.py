@@ -89,8 +89,8 @@ for line in open(id2seq_file):
 seq_array = []
 id2_aid = {}
 sid = 0
-seq_size = 64
-emb_files = ['../../../embeddings/oh.txt', '../../../embeddings/ac5.txt', '../../../embeddings/ac7.txt','../../../embeddings/ac5_aph.txt', '../../../embeddings/ac7_aph.txt' ,'../../../embeddings/aph_oh.txt', '../../../embeddings/aph.txt','../../../embeddings/aph_oh_order.txt', '../../../embeddings/ac5_aph_oh.txt', '../../../embeddings/fake16zeros.txt']
+seq_size = 2000
+emb_files = ['../../../embeddings/oh.txt', '../../../embeddings/ac5.txt', '../../../embeddings/ac7.txt','../../../embeddings/ac5_aph.txt', '../../../embeddings/ac7_aph.txt' ,'../../../embeddings/aph_oh.txt', '../../../embeddings/aph.txt','../../../embeddings/aph_oh_order.txt', '../../../embeddings/ac5_aph_oh.txt', '../../../embeddings/fake16zeros.txt', '../../../embeddings/fake1024zeros.txt']
 use_emb = 0
 hidden_dim = 25
 n_epochs=50
@@ -150,26 +150,30 @@ print (avg_m_seq, max_m_seq)
 dim = seq2t.dim
 seq_tensor = np.array([seq2t.embed_normalized(line, seq_size) for line in tqdm(seq_array)])
 
+# path = '/content/a.npy'
+# b = np.load(path, allow_pickle=True)
+# seq_tensor = np.vstack(np.array(tuple(b)))
 
-import numpy as gfg
+# import numpy as gfg
 
 
 # retrieving data from file.
-loaded_arr = gfg.loadtxt("geekfile.txt")
+# loaded_arr = gfg.loadtxt("geekfile.txt")
 
 # This loadedArr is a 2D array, therefore
 # we need to convert it to the original
 # array shape.reshaping to get original
 # matrice with original shape.
-load_original_arr = loaded_arr.reshape(
-	2497, 1024 // 1024, 1024)
+# load_original_arr = loaded_arr.reshape(
+# 	2497, 1024 // 1024, 1024)
 
-seq_tensor = load_original_arr
+# seq_tensor = load_original_arr
 
+# b = np.load('a.npy', allow_pickle=True)
+# np.rollaxis(b,-1)
 
-
-seq_tensor = seq_tensor.reshape(2497, -1)
-seq_tensor = seq_tensor.reshape(2497, 64, 16)
+# seq_tensor = seq_tensor.reshape(2497, -1)
+# seq_tensor = seq_tensor.reshape(2497, 64, 16)
 
 
 
@@ -254,6 +258,7 @@ accuracy = []
 total = []
 total_truth = []
 train_test = []
+# class_labels = class_labels[:2488]
 for train, test in kf.split(class_labels):
     if np.sum(class_labels[train], 0)[0] > 0.8 * len(train) or np.sum(class_labels[train], 0)[0] < 0.2 * len(train):
         continue
@@ -275,7 +280,8 @@ num_false_neg = 0.
 
 # pdb.set_trace()
 training_time = 1
-# pdb.set_trace()
+pdb.set_trace()
+print('Before loop')
 for train, test in train_test:
     merge_model = None
     merge_model = build_model()
@@ -283,9 +289,9 @@ for train, test in train_test:
     rms = RMSprop(learning_rate=0.001)
     merge_model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
     print(f'==================== Training time  {training_time} =====================')
-    merge_model.fit([seq_tensor[seq_index1[train]], seq_tensor[seq_index2[train]]], class_labels[train], batch_size=batch_size, epochs=n_epochs)
-    print(f'********************* Save model {training_time}*****************')
-    merge_model.save(f'saved_model/model{training_time}')
+    merge_model.fit([seq_tensor[seq_index1[train]], seq_tensor[seq_index2[train]]], class_labels[train], batch_size=batch_size, epochs=n_epochs, validation_data=([seq_tensor[seq_index1[test]], seq_tensor[seq_index2[test]]], class_labels[test]))
+    # print(f'********************* Save model {training_time}*****************')
+    # merge_model.save(f'saved_model/model{training_time}')
     print(f'==================End training {training_time}========================')
     # result1 = merge_model.evaluate([seq_tensor1[test], seq_tensor2[test]], class_labels[test])
     pred = merge_model.predict([seq_tensor[seq_index1[test]], seq_tensor[seq_index2[test]]])
@@ -311,8 +317,9 @@ for train, test in train_test:
     f1 = 2. * prec * recall / (prec + recall)
     mcc = (num_true_pos * num_true_neg - num_false_pos * num_false_neg) / ((num_true_pos + num_true_neg) * (num_true_pos + num_false_neg) * (num_false_pos + num_true_neg) * (num_false_pos + num_false_neg)) ** 0.5
     print(f"================== Overall performance metrics at training time {training_time}===============")
-    print (accuracy, prec, recall, spec, mcc, f1)
+    # print (accuracy, prec, recall, spec, mcc, f1)
     training_time += 1
+    print('In loop')
     
 accuracy = num_hit / num_total
 prec = num_true_pos / (num_true_pos + num_false_pos)

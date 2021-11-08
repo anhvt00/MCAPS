@@ -37,6 +37,7 @@ from seq2tensor import s2t
 
 # Import architecture component modules
 
+
 import tensorflow as tf
 from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import Dense, Activation, Dropout, Embedding, GRU, Bidirectional, BatchNormalization, Add, Flatten, Reshape, subtract, multiply, concatenate
@@ -45,7 +46,7 @@ from tensorflow.compat.v1.keras.layers import CuDNNGRU
 from tensorflow.keras.optimizers import Adam, RMSprop
 from tensorflow.compat.v1.keras.layers import CuDNNGRU, Input
 
-# import tensorflow.compat.v1.keras.backend as KTF
+import tensorflow.compat.v1.keras.backend as K
 
 # def get_session(gpu_fraction=0.25):
 #     '''Assume that you have 6GB of GPU memory and want to allocate ~2GB'''
@@ -190,51 +191,63 @@ class_labels = np.zeros((len(raw_data), 2))
 for i in range(len(raw_data)):
     class_labels[i][class_map[raw_data[i][label_index]]] = 1.
 
+def abs_diff(X):
+    assert(len(X) == 2)
+    s = X[0] - X[1]
+    s = K.abs(s)
+    return s
+
+def abs_diff_output_shape(input_shapes):
+    return input_shapes[0]
+
 def build_model():
     seq_input1 = Input(shape=(seq_size, dim), name='seq1')
     seq_input2 = Input(shape=(seq_size, dim), name='seq2')
-    l1=Conv1D(hidden_dim, 3, padding='same')
+    l1=Conv1D(hidden_dim, 3)
     r1=Bidirectional(GRU(hidden_dim, return_sequences=True))
     # r1=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    l2=Conv1D(hidden_dim, 3, padding='same')
+    l2=Conv1D(hidden_dim, 3)
     r2=Bidirectional(GRU(hidden_dim, return_sequences=True))
     # r2=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    l3=Conv1D(hidden_dim, 3, padding='same')
+    l3=Conv1D(hidden_dim, 3)
     r3=Bidirectional(GRU(hidden_dim, return_sequences=True))
     # r3=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    l4=Conv1D(hidden_dim, 3, padding='same')
+    l4=Conv1D(hidden_dim, 3)
     r4=Bidirectional(GRU(hidden_dim, return_sequences=True))
     # r4=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    l5=Conv1D(hidden_dim, 3, padding='same')
+    l5=Conv1D(hidden_dim, 3)
     # r5=Bidirectional(GRU(hidden_dim, return_sequences=True))
     r5=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    l6=Conv1D(hidden_dim, 3, padding='same')
-    s1=MaxPooling1D(3, padding='same')(l1(seq_input1))
+    l6=Conv1D(hidden_dim, 3)
+    s1=MaxPooling1D(3)(l1(seq_input1))
     s1=concatenate([r1(s1), s1])
-    s1=MaxPooling1D(3, padding='same')(l2(s1))
+    s1=MaxPooling1D(3)(l2(s1))
     s1=concatenate([r2(s1), s1])
-    s1=MaxPooling1D(3, padding='same')(l3(s1))
+    s1=MaxPooling1D(3)(l3(s1))
     s1=concatenate([r3(s1), s1])
-    s1=MaxPooling1D(3, padding='same')(l4(s1))
+    s1=MaxPooling1D(3)(l4(s1))
     s1=concatenate([r4(s1), s1])
-    s1=MaxPooling1D(3, padding='same')(l5(s1))
+    s1=MaxPooling1D(3)(l5(s1))
     s1=concatenate([r5(s1), s1])
     s1=l6(s1)
     s1=GlobalAveragePooling1D()(s1)
-    s2=MaxPooling1D(3, padding='same')(l1(seq_input2))
+    s2=MaxPooling1D(3)(l1(seq_input2))
     s2=concatenate([r1(s2), s2])
-    s2=MaxPooling1D(3, padding='same')(l2(s2))
+    s2=MaxPooling1D(3)(l2(s2))
     s2=concatenate([r2(s2), s2])
-    s2=MaxPooling1D(3, padding='same')(l3(s2))
+    s2=MaxPooling1D(3)(l3(s2))
     s2=concatenate([r3(s2), s2])
-    s2=MaxPooling1D(3, padding='same')(l4(s2))
+    s2=MaxPooling1D(3)(l4(s2))
     s2=concatenate([r4(s2), s2])
-    s2=MaxPooling1D(3, padding='same')(l5(s2))
+    s2=MaxPooling1D(3)(l5(s2))
     s2=concatenate([r5(s2), s2])
     s2=l6(s2)
     s2=GlobalAveragePooling1D()(s2)
-    merge_text = multiply([s1, s2])
-    x = Dense(100, activation='linear')(merge_text)
+    merge_text1 = multiply([s1, s2])
+    subtract_abs1 = tf.keras.layers.Lambda(abs_diff, abs_diff_output_shape)
+    merge_text2 = subtract_abs1([s1,s2])
+    merge_text_12 = concatenate([merge_text2, merge_text1])
+    x = Dense(100, activation='linear')(merge_text_12)
     x = tf.keras.layers.LeakyReLU(alpha=.3)(x)
     # x = tensorflow.keras.layers.LeakyReLU(alpha=0.3)(x)
     x = Dense(int((hidden_dim+7)/2), activation='linear')(x)
@@ -280,7 +293,7 @@ num_false_neg = 0.
 
 # pdb.set_trace()
 training_time = 1
-pdb.set_trace()
+# pdb.set_trace()
 print('Before loop')
 for train, test in train_test:
     merge_model = None

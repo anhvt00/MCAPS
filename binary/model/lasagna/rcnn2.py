@@ -45,7 +45,7 @@ from tensorflow.keras.layers import MaxPooling1D, AveragePooling1D, GlobalAverag
 from tensorflow.compat.v1.keras.layers import CuDNNGRU
 from tensorflow.keras.optimizers import Adam, RMSprop
 from tensorflow.compat.v1.keras.layers import CuDNNGRU, Input
-
+from tensorflow.keras.regularizers import L1, L2, L1L2
 import tensorflow.compat.v1.keras.backend as K
 
 # def get_session(gpu_fraction=0.25):
@@ -204,20 +204,20 @@ def build_model():
     seq_input1 = Input(shape=(seq_size, dim), name='seq1')
     seq_input2 = Input(shape=(seq_size, dim), name='seq2')
     l1=Conv1D(hidden_dim, 3)
-    r1=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    # r1=Bidirectional(GRU(hidden_dim, return_sequences=True))
+    r1=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
+    # r1=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
     l2=Conv1D(hidden_dim, 3)
-    r2=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    # r2=Bidirectional(GRU(hidden_dim, return_sequences=True))
+    r2=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
+    # r2=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
     l3=Conv1D(hidden_dim, 3)
-    r3=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    # r3=Bidirectional(GRU(hidden_dim, return_sequences=True))
+    r3=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
+    # r3=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
     l4=Conv1D(hidden_dim, 3)
-    r4=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    # r4=Bidirectional(GRU(hidden_dim, return_sequences=True))
+    r4=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
+    # r4=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
     l5=Conv1D(hidden_dim, 3)
-    # r5=Bidirectional(GRU(hidden_dim, return_sequences=True))
-    r5=Bidirectional(GRU(hidden_dim, return_sequences=True))
+    # r5=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
+    r5=Bidirectional(CuDNNGRU(hidden_dim, return_sequences=True))
     l6=Conv1D(hidden_dim, 3)
     s1=MaxPooling1D(3)(l1(seq_input1))
     s1=concatenate([r1(s1), s1])
@@ -293,7 +293,7 @@ num_false_neg = 0.
 
 # pdb.set_trace()
 training_time = 1
-# pdb.set_trace()
+pdb.set_trace()
 print('Before loop')
 for train, test in train_test:
     merge_model = None

@@ -2,11 +2,11 @@
 
 # Enhanced Protein-Protein Interaction Prediction based on Siamese Residual RCNN (EPIPR)
 
-  
+
 
 This is the repository for EPIPR, development of [PIPR](https://github.com/muhaochen/seq_ppi) repository. This repository contains the source code and links to some datasets used in training and testing the model.
 
-  
+
 
 ## Enhance to PIPR
 
@@ -16,17 +16,17 @@ made to extract predefined features from the sequences. Based on these features,
 
 fall short. -->
 Update to PIPR framework
- - Augment datasets from STRINGdb 11.5 version 
+ - Augment datasets from STRINGdb 11.5 version
  - Try another petrained embedding from large datasets
  - Tunning hyperparameters of the architecture
- 
 
-  
-  
+
+
+
 
 ## Environment
 
-  
+
 
 Python >= 3.6
 
@@ -36,11 +36,11 @@ CuDNN (if not installed, all CuDNNGRU in the source code needs to be changed to 
 
 Keras 2.2.4
 
-  
+
 
 [Here](https://github.com/anhvt00/PIPR/blob/master/environment/requirements.txt) is a requirements.txt file of the environment.
 
-  
+
 
 ## Folders
 
@@ -54,11 +54,11 @@ Each folder is attached with a **run.sh** to show how to run the evaluation prog
 
 ./embeddings contains pre-trained amino acid embeddings files
 
-  
+
 
 ## Datasets
 
-  
+
 
 Here I include altogether 6 datasets. New datasets processed in this work are marked *ND*.
 
@@ -74,16 +74,16 @@ Here I include altogether 6 datasets. New datasets processed in this work are ma
 
 6. Link to the normalized SKEMPI dataset is [here](http://yellowstone.cs.ucla.edu/~muhao/pipr/SKEMPI_all_dg_avg_(PIPR).zip).
 
-  
+
 
 ### Note: if you would like to use another PPI dataset of your own, then each id2seq_file in rcnn.py needs to be changed to a corresponding dictionary file.
 
 ## Debug notation
-- After you finish your requirements.txt, you change directory to PIPR/binary/model/lasagna and open rcnn.py file (not rcnn2.py)
-- Import pdb if pdb is not in the source code, set a break point before the loop (train_test), you can find the loop train_test in the file by search ctrl + f for the phrase "loop train_test"
-- Run the program in terminal with the command 
+- After you finish your `requirements.txt`, you change directory to `PIPR/binary/model/lasagna` and open `rcnn.py` file (not `rcnn2.py`)
+- Import pdb if pdb is not in the source code, set a break point before the loop (train_test), you can find the loop train_test in the file by search `ctrl + F` for the phrase "loop train_test"
+- Run the program in terminal with the command
 -  python program.py <dataset> <column_index_of_label> <result_location> <id_for_embeddings: 0=onehot, 1=a_c, 2=a_{ph}, 3=[a_c,a_{ph}]> <hidden_dim> <epochs_per_fold> (prototype)
--  CUDA_VISIBLE_DEVICES=0 python rcnn.py ../../../yeast/preprocessed/protein.actions.tsv -1 results/yeast_wvctc_rcnn_50_5.txt 3 50 100 (real-one) (we need to add CUDA_VISIBLE_DEVICES=0 to specify which GPU in our local or remote machine we want to use if we have more than 1 GPU)
+-  `CUDA_VISIBLE_DEVICES=0 python rcnn.py ../../../yeast/preprocessed/protein.actions.tsv -1 results/yeast_wvctc_rcnn_50_5.txt 3 50 100` (real-one) (we need to add `CUDA_VISIBLE_DEVICES=0` to specify which GPU in our local or remote machine we want to use if we have more than 1 GPU)
 -  When you run the command, you will face the file path error
 
 - Please **do not change anything** in the file except put pdb.set_trace()
@@ -93,13 +93,13 @@ Here I include altogether 6 datasets. New datasets processed in this work are ma
 
 This work has been published in the Bioinformatics journal featuring ISMB/ECCB 2019.
 
-  
+
 
 DOI: http://dx.doi.org/10.1093/bioinformatics/btz328
 
 <!-- Bibtex:
 
-  
+
 
 @article{chen2019pipr,
 

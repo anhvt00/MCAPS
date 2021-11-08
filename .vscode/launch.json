@@ -5,13 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "RCNN",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/binary/model/lasagna/"
-
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "args": [
+                "../../../yeast/preprocessed/protein.actions.tsv",
+                "-1",
+                "results/yeast_wvctc_rcnn_50_5.txt",
+                "3",
+                "50",
+                "100"
+            ]
         }
     ]
 }

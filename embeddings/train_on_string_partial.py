@@ -1,4 +1,4 @@
-txt_file = '../string/preprocessed/protein.actions.15k.tsv'
+txt_file = '../string/preprocessed/shk148.txt'
 inp = txt_file
 ofile = 'string_vec_partial.txt'
 
@@ -27,9 +27,9 @@ if __name__ == '__main__':
     sentences = LineSentence(inp)
         
 
-    model = Word2Vec(sentences, vector_size=5, window=10 , min_count=1 , sg=1 , workers=multiprocessing.cpu_count()-1 )
+    model = Word2Vec(sentences, vector_size=5, window=7, negative=5 , min_count=1 , sg=1 , workers=multiprocessing.cpu_count()-1 )
 
-    model.wv.save_word2vec_format("string_vec7.txt", binary=False)
+    model.wv.save_word2vec_format("string_ac5.txt", binary=False)
     #vocab_size = len(model.vocab)
     with open(ofile, 'w')as fp:
         # for w in model.wv.vocab:

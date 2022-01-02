@@ -1,0 +1,4 @@
+/var/spool/gridengine/execd/compute-0-5/job_scripts/197772: line 17: faa_stat.pl: command not found
+/var/spool/gridengine/execd/compute-0-5/job_scripts/197772: line 20: faa_stat.pl: command not found
+/var/spool/gridengine/execd/compute-0-5/job_scripts/197772: line 23: gnuplot1.pl: command not found
+/var/spool/gridengine/execd/compute-0-5/job_scripts/197772: line 23: gnuplot2.pl: command not found

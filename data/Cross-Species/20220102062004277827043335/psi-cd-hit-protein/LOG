@@ -1,0 +1,5 @@
+Sun Jan  2 06:20:04 PST 2022
+program	psi-cd-hit-protein
+Seqfile	all_organism_proteins.fasta
+Parameter set	-c 0.01
+

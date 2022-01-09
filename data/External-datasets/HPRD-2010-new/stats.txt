@@ -1,0 +1,4 @@
+total: 9435
+uni: 32
+refseq: 9183
+ena: 220

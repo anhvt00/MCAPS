@@ -1,0 +1,178 @@
+# def build_model(hparams):
+#     # Input of sequence tensor representations 
+#     seq_input1 = Input(shape=(SEQ_SIZE, dim), name='seq1')
+#     seq_input2 = Input(shape=(SEQ_SIZE, dim), name='seq2')
+
+#     # Define Conv1D and Bi-RNN (GRU/LSTM) use in architecture
+#     l1=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+#     r1=Bidirectional(GRU(hparams[HP_RNN_HIDDEN_DIM], return_sequences=True))
+#     l2=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+#     r2=Bidirectional(GRU(hparams[HP_RNN_HIDDEN_DIM], return_sequences=True))
+#     l3=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+#     r3=Bidirectional(GRU(hparams[HP_RNN_HIDDEN_DIM], return_sequences=True))
+#     l4=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+#     r4=Bidirectional(GRU(hparams[HP_RNN_HIDDEN_DIM], return_sequences=True))
+#     l5=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+#     r5=Bidirectional(GRU(hparams[HP_RNN_HIDDEN_DIM], return_sequences=True))
+#     l6=Conv1D(hparams[HP_CONV_HIDDEN_DIM], hparams[HP_KERNEL_SIZE], activation=hparams[HP_ACTIVATION_CONV], padding=hparams[HP_CONV_PADDING])
+    
+#     # Siamese architecture
+
+#     ### 1st sibling
+
+#     # 1st Block RCNN 
+#     s1=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l1(seq_input1))
+#     s0=s1
+#     activations=r1(s1)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s1 = tf.keras.layers.multiply([activations, attention])
+#     s1=concatenate([s1, s0])
+
+#     # 2nd Block RCNN
+#     s1=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l2(s1))
+#     s0=s1
+#     activations=r2(s1)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s1 = tf.keras.layers.multiply([activations, attention])
+#     s1=concatenate([s1, s0])
+
+#     # 3rd Block RCNN
+#     s1=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l3(s1))
+#     s0=s1
+#     activations=r3(s1)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s1 = tf.keras.layers.multiply([activations, attention])
+#     s1=concatenate([s1, s0])
+
+#     # 4th Block RCNN 
+#     s1=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l4(s1))
+#     s0=s1
+#     activations=r4(s1)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s1 = tf.keras.layers.multiply([activations, attention])
+#     s1=concatenate([s1, s0])
+
+#     # 5th Block RCNN
+#     s1=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l5(s1))
+#     s0=s1
+#     activations=r5(s1)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s1 = tf.keras.layers.multiply([activations, attention])
+#     s1=concatenate([s1, s0])
+    
+#     # Last convolution
+#     s1=l6(s1)
+#     s1=GlobalAveragePooling1D()(s1)
+#     ### 2nd sibling
+
+#     # 1st Block RCNN 
+#     s2=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l1(seq_input2))
+#     s0=s2
+#     activations=r1(s2)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s2= tf.keras.layers.multiply([activations, attention])
+#     s2=concatenate([s2, s0])
+
+#     # 2nd Block RCNN
+#     s2=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l2(s2))
+#     s0=s2
+#     activations=r2(s2)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s2= tf.keras.layers.multiply([activations, attention])
+#     s2=concatenate([s2, s0])
+
+#     # 3rd Block RCNN
+#     s2=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l3(s2))
+#     s0=s2
+#     activations=r3(s2)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s2= tf.keras.layers.multiply([activations, attention])
+#     s2=concatenate([s2, s0])
+
+#     # 4th Block RCNN 
+#     s2=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l4(s2))
+#     s0=s2
+#     activations=r4(s2)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s2= tf.keras.layers.multiply([activations, attention])
+#     s2=concatenate([s2, s0])
+
+#     # 5th Block RCNN
+#     s2=MaxPooling1D(hparams[HP_POOLING_KERNEL])(l5(s2))
+#     s0=s2
+#     activations=r5(s2)
+#     attention = Dense(1, activation='tanh')(activations)
+#     attention = Flatten()(attention)
+#     attention = Activation('softmax')(attention)
+#     attention = tf.keras.layers.RepeatVector(100)(attention)
+#     attention = tf.keras.layers.Permute([2, 1])(attention)
+#     s2 = tf.keras.layers.multiply([activations, attention])
+#     s2=concatenate([s2, s0])
+
+    
+#     # Last convolution
+#     s2=l6(s2)
+#     s2=GlobalAveragePooling1D()(s2)
+#     ### Combine two siblings of siamese architecture
+#     merge_text = multiply([s1, s2])
+    
+
+#     #### MLP Part
+#     # Set initializer
+#     he_initializer = tf.keras.initializers.HeUniform()
+    
+#     # First dense
+#     x = Dense(hparams[HP_FIRST_DENSE], activation=hparams[HP_ACTIVATION])(merge_text)
+#     # x = tf.keras.layers.LeakyReLU(alpha=.3)(x)
+#     x = Dropout(hparams[HP_DROPOUT])(x)
+
+#     # Second dense
+#     x = Dense(int((hparams[HP_CONV_HIDDEN_DIM]+7)/2), activation=hparams[HP_ACTIVATION])(x)
+#     # x = tf.keras.layers.LeakyReLU(alpha=.3)(x)
+#     x = Dropout(hparams[HP_DROPOUT])(x)
+
+#     # x = Dense(16, activation=hparams[HP_ACTIVATION])(x)
+#     # x = Dropout(hparams[HP_DROPOUT])(x)
+
+#     # Last softmax
+#     main_output = Dense(2, activation='softmax')(x)
+
+#     # Combine to form functional model
+#     merge_model = Model(inputs=[seq_input1, seq_input2], outputs=[main_output])
+#     return merge_model

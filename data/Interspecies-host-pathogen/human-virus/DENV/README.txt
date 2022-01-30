@@ -1,0 +1,3 @@
+- Origin: paper (author et al., year, link toi bai bao)? databases (version, year)? Du lieu cua loai (species) nao?
+- Statistics: bao nhieu pairs (bao nhieu neg pairs, pos pairs)? Bao nhieu protein?
+- strategy: mo ta ve cach xay dung tap du lieu cua ho (xem trong phan method/dataset cua bai bao)

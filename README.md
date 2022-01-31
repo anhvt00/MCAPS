@@ -42,60 +42,16 @@ Keras 2.2.4
 
 
 
-## Folders
+<!-- ## Folders
 
-./binary contains the implementation for the binary prediction task. This includes scripts to run on three datasets: Yeast, Human and multi-species.
-
-./type contains that for the interaction type prediction task.
-
-./regression contains that for the binding affinity prediction task.
-
-Each folder is attached with a **run.sh** to show how to run the evaluation program.
-
-./embeddings contains pre-trained amino acid embeddings files
+Embeddings for universal embedding usage -->
 
 
 
-## Datasets
 
 
 
-Here I include altogether 6 datasets. New datasets processed in this work are marked *ND*.
 
-1. The Yeast dataset for binary PPI prediction provided in [Guo et al. 2008](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2396404/).
-
-2. The *multi-species dataset (C. elegans, D. melanogaster and E. coli)* extracted from DIP for binary PPI prediction. (*ND*)
-
-3. Added another binary PPI prediction dataset from [Pan et el. 2010](https://www.ncbi.nlm.nih.gov/pubmed/20698572) under the folder *sun*.
-
-4. The SHS27k dataset for interaction type prediction can be downloaded from [here](http://yellowstone.cs.ucla.edu/~muhao/pipr/SHS_ppi_beta.zip) or from the [Google Drive](https://drive.google.com/open?id=1y_5gje6AofqjrkMPY58XUdKgDuu1mZCh). (*ND*)
-
-5. The larger SHS148k dataset for interaction type prediction can be found in the links above. (*ND*)
-
-6. Link to the normalized SKEMPI dataset is [here](http://yellowstone.cs.ucla.edu/~muhao/pipr/SKEMPI_all_dg_avg_(PIPR).zip).
-
-
-
-### Note: if you would like to use another PPI dataset of your own, then each id2seq_file in rcnn.py needs to be changed to a corresponding dictionary file.
-
-## Debug notation
-- After you finish your `requirements.txt`, you change directory to `PIPR/binary/model/lasagna` and open `rcnn.py` file (not `rcnn2.py`)
-- Import pdb if pdb is not in the source code, set a break point before the loop (train_test), you can find the loop train_test in the file by search `ctrl + F` for the phrase "loop train_test"
-- Run the program in terminal with the command
--  python program.py <dataset> <column_index_of_label> <result_location> <id_for_embeddings: 0=onehot, 1=a_c, 2=a_{ph}, 3=[a_c,a_{ph}]> <hidden_dim> <epochs_per_fold> (prototype)
--  `CUDA_VISIBLE_DEVICES=0 python rcnn.py ../../../yeast/preprocessed/protein.actions.tsv -1 results/yeast_wvctc_rcnn_50_5.txt 3 50 100` (real-one) (we need to add `CUDA_VISIBLE_DEVICES=0` to specify which GPU in our local or remote machine we want to use if we have more than 1 GPU)
--  When you run the command, you will face the file path error
-
-- Please **do not change anything** in the file except put pdb.set_trace()
-
-
-## Reference
-
-This work has been published in the Bioinformatics journal featuring ISMB/ECCB 2019.
-
-
-
-DOI: http://dx.doi.org/10.1093/bioinformatics/btz328
 
 <!-- Bibtex:
 

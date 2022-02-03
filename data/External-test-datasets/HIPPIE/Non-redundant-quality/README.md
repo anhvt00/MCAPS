@@ -22,6 +22,18 @@ Species: Human
 
 # Statistics
 
+Table 2
+
+- HIPPIE HQ
+
+  - Positive samples: 25701
+  - Low-redundancy: 3035
+
+- HIPPIE LQ
+
+  - Positive samples: 128591
+  - Low-redundancy: 2546
+
 ## Short, High Quality
 
 | Negative Pairs | Positive Pairs | Proteins |

@@ -20,6 +20,11 @@ Species: Human
 
 # Statistics
 
+Table 2
+
+- Positive samples: 4514
+- Low redundancy: 1276
+
 | Negative Pairs | Positive Pairs | Proteins |
 | -------------- | -------------- | -------- |
 | 0              | 1468           | 1704     |

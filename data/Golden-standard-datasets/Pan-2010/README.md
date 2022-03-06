@@ -12,7 +12,7 @@ Origin:
 
 Statistics:
     Original published in the paper
-        pairs 73110 PPIs including
+        pairs 73110 PPIs including (pan_orig.tsv)
             positive 36 630 PPIs
             negative 36 480 PPIs
     

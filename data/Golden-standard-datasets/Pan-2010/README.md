@@ -31,8 +31,12 @@ Statistics:
             positive 27593 PPIs (loss 9037 to original)
             negative 34298 PPIs (loss 2182 to original)
         
+
+        # Mapping file from id to sequence: pan_dict.tsv, has 8347 ids covering all ids in pan transformed dataset
+
         # Spliting shuffled dataset into train (55891 pairs or 90% dataset, pan_train.tsv) and test dataset (6000 pairs, pan_test.tsv)
 
+    
 
 
 

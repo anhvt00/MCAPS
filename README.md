@@ -1,45 +1,26 @@
 <!-- ## Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN -->
 
-# Enhanced Protein-Protein Interaction Prediction based on Siamese Residual RCNN (EPIPR)
-
-
-
-This is the repository for EPIPR, development of [PIPR](https://github.com/muhaochen/seq_ppi) repository. This repository contains the source code and links to some datasets used in training and testing the model.
-
-
-
-## Enhance to PIPR
+# Enhanced protein protein interaction (ePPI) hybrid neural machine boosting machine 
 
 <!-- Sequence-based protein–protein interaction (PPI) prediction represents a fundamental computational biology problem. To address this problem, extensive research efforts have been
 
 made to extract predefined features from the sequences. Based on these features, statistical algorithms are learned to classify the PPIs. However, such explicit features are usually costly to extract, and typically have limited coverage on the PPI information. We present an end-to-end framework, PIPR (Protein–Protein Interaction Prediction Based on Siamese Residual RCNN), for PPI predictions using only the protein sequences. PIPR incorporates a deep residual recurrent convolutional neural network in the Siamese architecture, which leverages both robust local features and contextualized information, which are significant for capturing the mutual influence of proteins sequences. PIPR relieves the data pre-processing efforts that are required by other systems, and generalizes well to different application scenarios. Experimental evaluations show that PIPR outperforms various state-of-the-art systems on the binary PPI prediction problem. Moreover, it shows a promising performance on more challenging problems of interaction type prediction and binding affinity estimation, where existing approaches
 
 fall short. -->
-Update to PIPR framework
- - Augment datasets from STRINGdb 11.5 version
- - Try another petrained embedding from large datasets
- - Tunning hyperparameters of the architecture
 
+**Annotation for below directories** 
 
-
-
-
-## Environment
-
-
-
-Python >= 3.6
-
-Tensorflow 2.x (with GPU support)
-
-CuDNN (if not installed, all CuDNNGRU in the source code needs to be changed to GRU)
-
-Keras 2.2.4
-
-
-
-[Here](https://github.com/anhvt00/PIPR/blob/master/environment/requirements.txt) is a requirements.txt file of the environment.
-
+Models
+ - LGBM - FSNN (Mahapatra et al., 2021)
+ - PIPR (Chen et al., 2019)
+ - D-SCRIPT (Sledzieski et al., 2021)
+ - HNBM (proposed)
+ 
+data
+ - Golden standard datasets: Martin et al., 2015 (E. coli); Guo et al., 2008 (S. cerevisae); Pan et al., 2010 (H. sapiens)
+ - Independent test sets: Cross-species (Guo et al. 2008), HPRD ver 2010, HIPPIE ver 2.0, DIP ver 20160430
+ - Interspecies datasets
+ - Generalization datasets
 
 
 <!-- ## Folders

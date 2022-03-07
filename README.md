@@ -1,6 +1,6 @@
 <!-- ## Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN -->
 
-# Enhanced protein protein interaction (ePPI) hybrid neural machine boosting machine 
+# Sequence - based hybrid neural machine boosting machine for protein protein interaction prediction
 
 <!-- Sequence-based protein–protein interaction (PPI) prediction represents a fundamental computational biology problem. To address this problem, extensive research efforts have been
 

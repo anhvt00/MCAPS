@@ -1,6 +1,0 @@
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install python3-pip -y
-python3 -m pip install sklearn
-python3 -m pip install numpy
-python3 -m pip install tqdm

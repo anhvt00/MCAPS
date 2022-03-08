@@ -1,4 +1,4 @@
-# Guo 2010 dataset
+# Guo 2008 dataset
 
 ## Origin
     

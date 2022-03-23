@@ -147,8 +147,3 @@ cython_debug/
 
 
 ### need to ignore caus
-results/
-string/
-sun/
-type/
-yeast/

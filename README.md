@@ -10,19 +10,21 @@ fall short. -->
 
 **Annotation for below directories** 
 
-Models
+**models**
  - LGBM - FSNN (Mahapatra et al., 2021)
  - PIPR (Chen et al., 2019)
  - D-SCRIPT (Sledzieski et al., 2021)
  - HNBM (proposed)
  
-data
- - Golden standard datasets: Martin et al., 2015 (E. coli); Guo et al., 2008 (S. cerevisae); Pan et al., 2010 (H. sapiens)
+**data**
+ - Golden standard datasets: E. coli Martin et al., 2015 (E. coli); Yeast Guo et al., 2008 (S. cerevisae); Human Pan et al., 2010 (H. sapiens)
  - Independent test sets: Cross-species (Guo et al. 2008), HPRD ver 2010, HIPPIE ver 2.0, DIP ver 20160430
- - Interspecies datasets
- - Generalization datasets
+ - Dscript-data: imbalance subdatasets following the same evaluation scheme D-SCRIPT (Sledzieski et al., 2021)
+ - Interspecies datasets: Virus-human PPI datasets (Yang et al., 2021) 
+ - Generalization datasets: Marcotee et al., 2012; Hamp et al., 2015
 
-
+**environment**
+ - dependencies to run this project, if you run on Google Colab, you can pass the step of installing depedencies
 <!-- ## Folders
 
 Embeddings for universal embedding usage -->

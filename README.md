@@ -1,6 +1,6 @@
 <!-- ## Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN -->
 
-# MCAPS Multi-channel accumulated pooling siamese neural network
+# MCAPS Multi-channel Accumulated Pooling Siamese Neural Network for Protein-Protein Interactions Prediction
 
 <!-- Sequence-based protein–protein interaction (PPI) prediction represents a fundamental computational biology problem. To address this problem, extensive research efforts have been
 

@@ -1,3 +1,0 @@
-output: representative sequences
-output.clstr: clusters sorted by sequence length
-output-sorted.clstr: clusters sorted by cluster size

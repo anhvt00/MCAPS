@@ -1,6 +1,6 @@
 <!-- ## Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN -->
 
-# MCAPS Multi-channel Accumulated Pooling Siamese Neural Network for Protein-Protein Interactions Prediction
+# A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction MCAPST5-X
 
 <!-- Sequence-based protein–protein interaction (PPI) prediction represents a fundamental computational biology problem. To address this problem, extensive research efforts have been
 
@@ -14,17 +14,17 @@ fall short. -->
  - LGBM - FSNN (Mahapatra et al., 2021)
  - PIPR (Chen et al., 2019)
  - D-SCRIPT (Sledzieski et al., 2021)
- - HNBM (proposed)
+ - MCAPST5-X (proposed)
  
 **data**
- - Golden standard datasets: E. coli Martin et al., 2015 (E. coli); Yeast Guo et al., 2008 (S. cerevisae); Human Pan et al., 2010 (H. sapiens)
- - Independent test sets: Cross-species (Guo et al. 2008), HPRD ver 2010, HIPPIE ver 2.0, DIP ver 20160430
- - Dscript-data: imbalance subdatasets following the same evaluation scheme D-SCRIPT (Sledzieski et al., 2021)
+ - Golden standard datasets: E. coli Martin _et al_., 2015; Yeast Guo _et al._, 2008; Human Pan et al., 2010 
+ - Independent test sets: Cross-species (Guo et al. 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
+ - Dscript-data: Human, _E. coli_, Fly, Worm, Yeast (Sledzieski et al., 2021)
  - Interspecies datasets: Virus-human PPI datasets (Yang et al., 2021) 
- - Generalization datasets: Marcotee et al., 2012; Hamp et al., 2015
 
-**environment**
- - dependencies to run this project, if you run on Google Colab, you can pass the step of installing depedencies
+**checkpoints**
+ - training_on_Pan
+ - training_on_Sledzieski
 <!-- ## Folders
 
 Embeddings for universal embedding usage -->

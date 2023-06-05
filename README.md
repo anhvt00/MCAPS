@@ -1,64 +1,29 @@
-# A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction MCAPST5-X
+# MCAPS: Protein-Protein Interaction Prediction
 
-**Annotation for below directories** 
+MCAPS is a project focused on building a deep neural network for fast and accurate protein-protein interaction prediction. It's a hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction, referred to as MCAPST5-X.
 
-**models**
- - LGBM - FSNN (Mahapatra _et al._, 2021)
- - PIPR (Chen _et al._, 2019)
- - D-SCRIPT (Sledzieski _et al._, 2021)
- - Topsy-Turvy (Singh _et al._, 2022)
- - MCAPST5-X (proposed)
+## Directory Structure
 
-You can simply run the Jupyter Notebook corresponding to each model and make some small changes on the datasets you want to do cross-validation test, or inference. 
+- `models`: This directory contains various models including:
+  - LGBM - FSNN (Mahapatra et al., 2021)
+  - PIPR (Chen et al., 2019)
+  - D-SCRIPT (Sledzieski et al., 2021)
+  - Topsy-Turvy (Singh et al., 2022)
+  - MCAPST5-X (proposed)
+
  
-**data**
- - Golden standard datasets: E. coli Martin _et al_., 2015; Yeast Guo _et al._, 2008; Human Pan et al., 2010 
- - Independent test sets: Cross-species (Guo et al. 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
- - Dscript-data: Human, _E. coli_, Fly, Worm, Yeast (Sledzieski _et al._, 2021)
- - Interspecies datasets: Virus-human PPI datasets (Yang _et al._, 2021) 
+- `data`: This directory contains various datasets including:
+  - Golden standard datasets: E. coli Martin et al., 2015; Yeast Guo et al., 2008; Human Pan et al., 2010
+  - Independent test sets: Cross-species (Guo et al. 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
+  - Dscript-data: Human, E. coli, Fly, Worm, Yeast (Sledzieski et al., 2021)
+  - Interspecies datasets: Virus-human PPI datasets (Yang et al., 2021)
 
-**checkpoints**
- - Pan
- - Sledzieski
+- `checkpoints`: This directory contains checkpoints for the Pan and Sledzieski models.
 
-**embeddings**
+- `embeddings`: This directory contains some embeddings for the PIPR model only.
+- `environment`: This directory contains the file requirements.txt of all packages need to reproduce MCAPST5-X, but you can ignore because all the necessary libraries with specified version are included in the block cell in the Jupyter Notebook for MCAPST5-X.
 
-This directory contains some embeddings for the PIPR model only.
+## Usage
 
-
-
-
-
-
-
-<!-- Bibtex:
-
-
-
-@article{chen2019pipr,
-
-title={Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN},
-
-author={Chen, Muhao and Ju, Chelsea and Zhou, Guangyu and Chen, Xuelu and Zhang, Tianran and Chang, Kai-Wei and Zaniolo, Carlo and Wang, Wei},
-
-journal={Bioinformatics},
-
-volume = {35},
-
-number = {14},
-
-pages = {i305-i314},
-
-year = {2019},
-
-month = {07},
-
-publisher={Oxford University Press}
-
-}
-
-## MuPIPR (NAR GaB 2020)
-
-Also check out the follow up work in the *NAR Genom. Bioinform.* paper [Mutation effect estimation on protein–protein interactions using deep contextualized representation learning](https://academic.oup.com/nargab/article/2/2/lqaa015/5781175), in which a *pre-trained neural language model* helps the PIPR architecture to estimate the point mutation effect (e.g. estimating the change of binding affinity and the change of BSA) in PPIs.
-
-The released software is available at [guangyu-zhou/MuPIPR](https://github.com/guangyu-zhou/MuPIPR). -->
+To use any of the models, simply run the corresponding Jupyter Notebook and make some small changes on the datasets you want to do cross-validation test, or inference.
+We use the virtual machines from the cloud high-throughput computing services VastAI with GPU A100 (80 Gb VRAM) and 120 Gb CPU. 

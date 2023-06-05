@@ -26,7 +26,13 @@ A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Pr
 
 ## Usage
 
-To reproduce or experiment with the models, you simply run the Jupyter Notebook corresponding to each model and make some small changes on the datasets you want to perform the cross-validation or inference evaluation. 
+To reproduce or experiment with the models, navigate to the `models` directory and open the corresponding Jupyter Notebook for each model. 
 
-The project uses virtual machines from the cloud high-throughput computing services VastAI with GPU A100 (80 Gb VRAM) and 120 Gb CPU. This setup allows for efficient model cross-validation, training and inference.
+You can then choose different datasets from the `data` directory to perform cross-validation tests or inference evaluations. Each notebook contains detailed instructions and comments to guide you through the process. For more information on how to use each model, refer to the corresponding Jupyter Notebook.
 
+
+## Hardware Requirements
+
+The MCAPS project is designed to run on high-performance computing hardware. Specifically, we recommend using a virtual machine equipped with an A100 GPU (80 Gb VRAM) and 120 Gb CPU. This setup ensures efficient model cross-validation, training, and inference, enabling you to quickly and accurately predict protein-protein interactions.
+
+We leverage the power of cloud computing through [VastAI](https://vast.ai/), a high-throughput computing service, to access this level of hardware. If you're using your own setup, please ensure your hardware meets these requirements to achieve optimal performance.

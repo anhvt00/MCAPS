@@ -6,7 +6,9 @@
  - LGBM - FSNN (Mahapatra _et al._, 2021)
  - PIPR (Chen _et al._, 2019)
  - D-SCRIPT (Sledzieski _et al._, 2021)
+ - Topsy-Turvy (Singh _et al._, 2022)
  - MCAPST5-X (proposed)
+You can simply run the Jupyter Notebook corresponding to each model and make some small changes on the datasets you want to do cross-validation test, or inference. 
  
 **data**
  - Golden standard datasets: E. coli Martin _et al_., 2015; Yeast Guo _et al._, 2008; Human Pan et al., 2010 
@@ -17,10 +19,9 @@
 **checkpoints**
  - Pan
  - Sledzieski
-<!-- ## Folders
 
-Embeddings for universal embedding usage -->
-
+**embeddings**
+This directory contains some embeddings for the PIPR model only.
 
 
 

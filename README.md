@@ -1,30 +1,22 @@
-<!-- ## Multifaceted Protein-Protein Interaction Prediction Based on Siamese Residual RCNN -->
-
 # A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction MCAPST5-X
-
-<!-- Sequence-based protein–protein interaction (PPI) prediction represents a fundamental computational biology problem. To address this problem, extensive research efforts have been
-
-made to extract predefined features from the sequences. Based on these features, statistical algorithms are learned to classify the PPIs. However, such explicit features are usually costly to extract, and typically have limited coverage on the PPI information. We present an end-to-end framework, PIPR (Protein–Protein Interaction Prediction Based on Siamese Residual RCNN), for PPI predictions using only the protein sequences. PIPR incorporates a deep residual recurrent convolutional neural network in the Siamese architecture, which leverages both robust local features and contextualized information, which are significant for capturing the mutual influence of proteins sequences. PIPR relieves the data pre-processing efforts that are required by other systems, and generalizes well to different application scenarios. Experimental evaluations show that PIPR outperforms various state-of-the-art systems on the binary PPI prediction problem. Moreover, it shows a promising performance on more challenging problems of interaction type prediction and binding affinity estimation, where existing approaches
-
-fall short. -->
 
 **Annotation for below directories** 
 
 **models**
- - LGBM - FSNN (Mahapatra et al., 2021)
- - PIPR (Chen et al., 2019)
- - D-SCRIPT (Sledzieski et al., 2021)
+ - LGBM - FSNN (Mahapatra _et al._, 2021)
+ - PIPR (Chen _et al._, 2019)
+ - D-SCRIPT (Sledzieski _et al._, 2021)
  - MCAPST5-X (proposed)
  
 **data**
  - Golden standard datasets: E. coli Martin _et al_., 2015; Yeast Guo _et al._, 2008; Human Pan et al., 2010 
  - Independent test sets: Cross-species (Guo et al. 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
- - Dscript-data: Human, _E. coli_, Fly, Worm, Yeast (Sledzieski et al., 2021)
- - Interspecies datasets: Virus-human PPI datasets (Yang et al., 2021) 
+ - Dscript-data: Human, _E. coli_, Fly, Worm, Yeast (Sledzieski _et al._, 2021)
+ - Interspecies datasets: Virus-human PPI datasets (Yang _et al._, 2021) 
 
 **checkpoints**
- - training_on_Pan
- - training_on_Sledzieski
+ - Pan
+ - Sledzieski
 <!-- ## Folders
 
 Embeddings for universal embedding usage -->

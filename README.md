@@ -1,29 +1,32 @@
-# MCAPS: Protein-Protein Interaction Prediction
+# MCAPST5-X for Protein-Protein Interaction Prediction
 
-MCAPS is a project focused on building a deep neural network for fast and accurate protein-protein interaction prediction. It's a hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction, referred to as MCAPST5-X.
+A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction MCAPST5-X. 
 
 ## Directory Structure
 
-- `models`: This directory contains various models including:
-  - LGBM - FSNN (Mahapatra et al., 2021)
-  - PIPR (Chen et al., 2019)
-  - D-SCRIPT (Sledzieski et al., 2021)
-  - Topsy-Turvy (Singh et al., 2022)
+- `models`: This directory houses the various models used and developed throughout the project. These include:
+  - LGBM - FSNN (Mahapatra _et al._, 2021)
+  - PIPR (Chen _et al._, 2019)
+  - D-SCRIPT (Sledzieski _et al._, 2021)
+  - Topsy-Turvy (Singh _et al._, 2022)
   - MCAPST5-X (proposed)
 
  
 - `data`: This directory contains various datasets including:
-  - Golden standard datasets: E. coli Martin et al., 2015; Yeast Guo et al., 2008; Human Pan et al., 2010
-  - Independent test sets: Cross-species (Guo et al. 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
-  - Dscript-data: Human, E. coli, Fly, Worm, Yeast (Sledzieski et al., 2021)
-  - Interspecies datasets: Virus-human PPI datasets (Yang et al., 2021)
+  - Golden standard datasets: E. coli (Martin _et al._, 2005); Yeast (Guo _et al._, 2008); Human (Pan _et al_., 2010)
+  - Independent test sets: Cross-species (Guo _et al._ 2008), HPRD version 2010, HIPPIE version 2.0, DIP version 20160430
+  - Dscript-data: Human, E. coli, Fly, Worm, Yeast (Sledzieski _et al._, 2021)
+  - Interspecies datasets: Virus-human PPI datasets (Yang _et al._, 2021)
 
-- `checkpoints`: This directory contains checkpoints for the Pan and Sledzieski models.
+- `checkpoints`: This directory contains the saved states of MCAPST5-X training on Pan and Sledzieski human datasets for the inference on other indepedent test sets, allowing for the resumption of training and inference.
 
-- `embeddings`: This directory contains some embeddings for the PIPR model only.
-- `environment`: This directory contains the file requirements.txt of all packages need to reproduce MCAPST5-X, but you can ignore because all the necessary libraries with specified version are included in the block cell in the Jupyter Notebook for MCAPST5-X.
+- `embeddings`: This directory contains pre-computed embeddings used specifically for the PIPR model.
+
+- `environment`: This directory contains a `requirements.txt` file that lists all the Python packages needed to reproduce the MCAPST5-X model. However, this can be ignored as all the necessary libraries with specified versions are included in the Jupyter Notebook for MCAPST5-X.
 
 ## Usage
 
-To use any of the models, simply run the corresponding Jupyter Notebook and make some small changes on the datasets you want to do cross-validation test, or inference.
-We use the virtual machines from the cloud high-throughput computing services VastAI with GPU A100 (80 Gb VRAM) and 120 Gb CPU. 
+To reproduce or experiment with the models, you simply run the Jupyter Notebook corresponding to each model and make some small changes on the datasets you want to perform the cross-validation or inference evaluation. 
+
+The project uses virtual machines from the cloud high-throughput computing services VastAI with GPU A100 (80 Gb VRAM) and 120 Gb CPU. This setup allows for efficient model cross-validation, training and inference.
+

@@ -26,13 +26,13 @@ A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Pr
 
 ## Usage
 
-To reproduce or experiment with the models, navigate to the `models` directory and open the corresponding Jupyter Notebook for each model. 
+To reproduce or experiment with the models, navigate to the `models` directory and open the corresponding Jupyter Notebook for each model. The notebooks suffixed with _cross_validation_ are used for running cross-validation assessments, while the ones suffixed with _inference_ are used for inferring on new independent datasets.
 
 You can then choose different datasets from the `data` directory to perform cross-validation tests or inference evaluations. Each notebook contains detailed instructions and comments to guide you through the process. For more information on how to use each model, refer to the corresponding Jupyter Notebook.
 
 
 ## Hardware Requirements
 
-The MCAPS project is designed to run on high-performance computing hardware. Specifically, we recommend using a virtual machine equipped with an A100 SXM4 GPU (80 GB VRAM) and 120 GB RAM CPU. This setup ensures efficient model cross-validation, training, and inference, enabling you to quickly and accurately predict protein-protein interactions.
+The MCAPST5-X project is designed to run on high-performance computing hardware. We recommend using a virtual machine equipped with an A100 SXM4 GPU (80 GB VRAM) and a CPU with 120 GB RAM. This setup ensures efficient model cross-validation, training, and inference, enabling fast and accurate protein-protein interaction predictions.
 
-We leverage the power of cloud computing through [VastAI](https://vast.ai/), a high-throughput computing service, to access this level of hardware. We use the Docker Image Template **tensorflow:latest-gpu** with the Launch Mode **jupyter-python notebook**, which is a convenient and consistent setup for running deep learning experiments on the Jupyter Notebook environment.  If you're using your own setup, please ensure your hardware meets these requirements to achieve optimal performance.
+We leverage the power of cloud computing through [VastAI](https://vast.ai/), a high-throughput computing service, to access this level of hardware. We use the Docker Image Template _tensorflow:latest-gpu_ with the Launch Mode _jupyter-python notebook_, which is a convenient and consistent setup for running deep learning experiments on the Jupyter Notebook environment.  If you're using your own setup, please ensure your hardware meets these requirements to achieve optimal performance.

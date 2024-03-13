@@ -1,8 +1,8 @@
-# xCAPST5 for Protein-Protein Interaction Prediction Based on Sequences
+# xCAPT5 for Protein-Protein Interaction Prediction Based on Sequences
 
 **Reference:** Dang, T.H., Vu, T.A. xCAPT5: protein–protein interaction prediction using deep and wide multi-kernel pooling convolutional neural networks with protein language model. BMC Bioinformatics 25(106), 2024. [https://doi.org/10.1186/s12859-024-05725-6](https://doi.org/10.1186/s12859-024-05725-6)
 
-A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction MCAPST5-X. 
+A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Protein Language Model for Protein-Protein Prediction xCAPT5. 
 
 ## Directory Structure
 
@@ -11,7 +11,7 @@ A Hybrid of Deep multi-kernel Convolutional Neural Networks and XGBoost using Pr
   - PIPR (Chen _et al._, 2019)
   - D-SCRIPT (Sledzieski _et al._, 2021)
   - Topsy-Turvy (Singh _et al._, 2022)
-  - xCAPST5 (proposed, Dang and Vu, 2024)
+  - xCAPT5 (proposed, Dang and Vu, 2024)
 
  
 - `data`: This directory contains various datasets including:
@@ -35,6 +35,6 @@ You can then choose different datasets from the `data` directory to perform cros
 
 ## Hardware Requirements
 
-The MCAPS project is designed to run on high-performance computing hardware. We recommend using a virtual machine equipped with an A100 SXM4 GPU (80 GB VRAM) and a CPU with 120 GB RAM. This setup ensures efficient model cross-validation, training, and inference, enabling fast and accurate protein-protein interaction predictions.
+This project is designed to run on high-performance computing hardware. We recommend using a virtual machine equipped with an A100 SXM4 GPU (80 GB VRAM) and a CPU with 120 GB RAM. This setup ensures efficient model cross-validation, training, and inference, enabling fast and accurate protein-protein interaction predictions.
 
 We leverage the power of cloud computing through [VastAI](https://vast.ai/), a high-throughput computing service, to access this level of hardware. We use the Docker Image Template _tensorflow:latest-gpu_ with the Launch Mode _jupyter-python notebook_, which is a convenient and consistent setup for running deep learning experiments on the Jupyter Notebook environment.  If you're using your own setup, please ensure your hardware meets these requirements to achieve optimal performance.
